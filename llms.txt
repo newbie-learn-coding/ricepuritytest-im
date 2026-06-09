@@ -1,0 +1,5 @@
+# RicePurityTest.im
+
+Independent browser-based Rice Purity Test website. Answers are calculated locally in the browser. Main sections: /take/, /score-meaning/, /score/0/ through /score/100/, /questions/, /average-score/, /privacy/, /disclaimer/, /not-affiliated/.
+
+The site is entertainment only and not affiliated with Rice University.

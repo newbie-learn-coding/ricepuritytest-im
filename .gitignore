@@ -1,0 +1,29 @@
+.DS_Store
+**/.DS_Store
+
+# Local credentials and operator-only state
+.env
+.env.*
+local.env.txt
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Project/operator deployment records
+AGENTS.md
+BUILD_SUMMARY.txt
+PROJECT_SPEC_P2.md
+PROJECT_STATE.md
+README_DEPLOY.md
+ops/
+
+# Local artifacts
+*.log
+*.zip
+coverage/
+dist/
+node_modules/
+.cache/
+.tmp/
+tmp/
