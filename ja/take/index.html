@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>テストを始める — Rice Purity Test</title>
-<meta name="description" content="Take the Rice Purity Test privately in your browser. 100 questions, instant score, no sign-up.">
+<meta name="description" content="Rice Purity Test をブラウザでプライベートに受けられます。100 問、即時スコア、登録不要。">
 <link rel="canonical" href="https://ricepuritytest.im/ja/take/">
 <link rel="alternate" hreflang="en" href="https://ricepuritytest.im/take/">
 <link rel="alternate" hreflang="es" href="https://ricepuritytest.im/es/take/">
@@ -18,24 +18,24 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="RicePurityTest.im">
 <meta property="og:title" content="テストを始める — Rice Purity Test">
-<meta property="og:description" content="Take the Rice Purity Test privately in your browser. 100 questions, instant score, no sign-up.">
+<meta property="og:description" content="Rice Purity Test をブラウザでプライベートに受けられます。100 問、即時スコア、登録不要。">
 <meta property="og:url" content="https://ricepuritytest.im/ja/take/">
 <meta property="og:image" content="https://ricepuritytest.im/assets/img/og-default.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#8847ed">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="/manifest.webmanifest">
-<link rel="stylesheet" href="/assets/css/styles.css?v=ui-20260609-p43-mobilecards">
+<link rel="stylesheet" href="/assets/css/styles.css?v=ui-20260610-p46-i18nquiz">
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Rice Purity Test","url":"https://ricepuritytest.im/ja/take/","applicationCategory":"EntertainmentApplication","operatingSystem":"Any","isAccessibleForFree":true,"description":"A browser-based Rice Purity Test with no login and no stored answers."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Rice Purity Test","url":"https://ricepuritytest.im/ja/take/","applicationCategory":"EntertainmentApplication","operatingSystem":"Any","isAccessibleForFree":true,"description":"ログイン不要で、回答を保存しないブラウザ版 Rice Purity Test です。"}</script>
 </head>
 <body>
 
-    <a class="skip" href="#main">Skip to content</a>
+    <a class="skip" href="#main">本文へスキップ</a>
     <header class="topbar">
       <div class="container nav">
         <a class="brand" href="/ja/"><span class="brand-mark">♡</span><span>Rice Purity Test</span></a>
-        <nav class="navlinks" aria-label="Main navigation"><a href="/ja/take/">テスト</a><a href="/ja/score-meaning/">スコアの意味</a><a href="/ja/questions/">質問</a><a href="/ja/average-score/">平均スコア</a><a href="/ja/blog/">ブログ</a><a href="/ja/about/">概要</a></nav>
+        <nav class="navlinks" aria-label="メインナビゲーション"><a href="/ja/take/">テスト</a><a href="/ja/score-meaning/">スコアの意味</a><a href="/ja/questions/">質問</a><a href="/ja/average-score/">平均スコア</a><a href="/ja/blog/">ブログ</a><a href="/ja/about/">概要</a></nav>
         <select id="languageSelect" class="lang-select" aria-label="言語"><option value="/take/">🇺🇸 English</option>
 <option value="/es/take/">🇪🇸 Español</option>
 <option value="/pt/take/">🇧🇷 Português</option>
@@ -45,7 +45,7 @@
 <option value="/zh/take/">🇨🇳 中文（简体）</option>
 <option value="/ja/take/" selected>🇯🇵 日本語</option></select>
         <a class="btn small" href="/ja/take/">テストを始める →</a>
-        <button class="hamb" id="mobileToggle" aria-label="Menu">☰</button>
+        <button class="hamb" id="mobileToggle" aria-label="メニュー">☰</button>
       </div>
       <div class="container mobile-menu" id="mobileMenu"><a href="/ja/take/">テスト</a><a href="/ja/score-meaning/">スコアの意味</a><a href="/ja/questions/">質問</a><a href="/ja/average-score/">平均スコア</a><a href="/ja/blog/">ブログ</a><a href="/ja/about/">概要</a></div>
     </header>
@@ -56,7 +56,7 @@
       <span class="eyebrow">ブラウザ内で計算</span>
       <h1>Rice Purity Test</h1>
       <p>回答はブラウザ内で計算されます。回答を収集・保存しません。 成熟した利用者向けです。助言として扱わないでください。</p>
-      <div class="question-toolbar"><b>選択した経験: <span id="checkedCount">0</span></b><b>スコア: <span id="liveScore">100</span></b><div id="testProgress" class="progress" aria-label="Progress"><span></span></div><button class="btn secondary small" id="resetTest" type="button">Reset</button></div>
+      <div class="question-toolbar"><b>選択した経験: <span id="checkedCount">0</span></b><b>スコア: <span id="liveScore">100</span></b><div id="testProgress" class="progress" aria-label="進捗"><span></span></div><button class="btn secondary small" id="resetTest" type="button">リセット</button></div>
       <div id="questionList" class="grid"></div>
       <div class="sticky-result"><div><b>スコア: <span id="liveScoreSticky">100</span></b><p class="mini">終わったら計算してください。回答はどこにも送信されません。</p></div><button class="btn pink" id="finishTest" type="button">完了して計算</button></div>
       <section id="inlineResult" class="inline-result score-card" hidden>
@@ -78,14 +78,14 @@
         <div><b>スコアの意味</b>
           <a href="/ja/score-meaning/">全スコアの説明</a>
           <a href="/ja/average-score/">平均スコア</a>
-          <a href="/ja/score/72/">Score 72</a>
+          <a href="/ja/score/72/">72点</a>
         </div>
         <div><b>質問</b>
           <a href="/ja/take/">テストを始める</a>
           <a href="/ja/questions/">質問</a>
-          <a href="/ja/blog/what-is-the-rice-purity-test/">What is it?</a>
+          <a href="/ja/blog/what-is-the-rice-purity-test/">これは何ですか？</a>
         </div>
-        <div><b>Trust</b>
+        <div><b>信頼</b>
           <a href="/ja/privacy/">プライバシー</a>
           <a href="/ja/disclaimer/">免責事項</a>
           <a href="/ja/not-affiliated/">非公式</a>
@@ -93,7 +93,7 @@
       </div>
     </footer>
     
-<script src="/assets/js/questions.js" defer></script>
-<script src="/assets/js/app.js?v=ui-20260609-p43-mobilecards" defer></script>
+<script src="/assets/js/questions.js?v=ui-20260610-p46-i18nquiz" defer></script>
+<script src="/assets/js/app.js?v=ui-20260610-p46-i18nquiz" defer></script>
 </body>
 </html>

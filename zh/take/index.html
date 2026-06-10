@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>开始测试 — Rice Purity Test</title>
-<meta name="description" content="Take the Rice Purity Test privately in your browser. 100 questions, instant score, no sign-up.">
+<meta name="description" content="在你的浏览器中私密完成 Rice Purity Test。100 道题，立即出分，无需注册。">
 <link rel="canonical" href="https://ricepuritytest.im/zh/take/">
 <link rel="alternate" hreflang="en" href="https://ricepuritytest.im/take/">
 <link rel="alternate" hreflang="es" href="https://ricepuritytest.im/es/take/">
@@ -18,24 +18,24 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="RicePurityTest.im">
 <meta property="og:title" content="开始测试 — Rice Purity Test">
-<meta property="og:description" content="Take the Rice Purity Test privately in your browser. 100 questions, instant score, no sign-up.">
+<meta property="og:description" content="在你的浏览器中私密完成 Rice Purity Test。100 道题，立即出分，无需注册。">
 <meta property="og:url" content="https://ricepuritytest.im/zh/take/">
 <meta property="og:image" content="https://ricepuritytest.im/assets/img/og-default.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#8847ed">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="/manifest.webmanifest">
-<link rel="stylesheet" href="/assets/css/styles.css?v=ui-20260609-p43-mobilecards">
+<link rel="stylesheet" href="/assets/css/styles.css?v=ui-20260610-p46-i18nquiz">
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Rice Purity Test","url":"https://ricepuritytest.im/zh/take/","applicationCategory":"EntertainmentApplication","operatingSystem":"Any","isAccessibleForFree":true,"description":"A browser-based Rice Purity Test with no login and no stored answers."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Rice Purity Test","url":"https://ricepuritytest.im/zh/take/","applicationCategory":"EntertainmentApplication","operatingSystem":"Any","isAccessibleForFree":true,"description":"一个基于浏览器的 Rice Purity Test，无需登录，也不会保存答案。"}</script>
 </head>
 <body>
 
-    <a class="skip" href="#main">Skip to content</a>
+    <a class="skip" href="#main">跳到正文</a>
     <header class="topbar">
       <div class="container nav">
         <a class="brand" href="/zh/"><span class="brand-mark">♡</span><span>Rice Purity Test</span></a>
-        <nav class="navlinks" aria-label="Main navigation"><a href="/zh/take/">测试</a><a href="/zh/score-meaning/">分数含义</a><a href="/zh/questions/">题目</a><a href="/zh/average-score/">平均分</a><a href="/zh/blog/">博客</a><a href="/zh/about/">关于</a></nav>
+        <nav class="navlinks" aria-label="主导航"><a href="/zh/take/">测试</a><a href="/zh/score-meaning/">分数含义</a><a href="/zh/questions/">题目</a><a href="/zh/average-score/">平均分</a><a href="/zh/blog/">博客</a><a href="/zh/about/">关于</a></nav>
         <select id="languageSelect" class="lang-select" aria-label="语言"><option value="/take/">🇺🇸 English</option>
 <option value="/es/take/">🇪🇸 Español</option>
 <option value="/pt/take/">🇧🇷 Português</option>
@@ -45,7 +45,7 @@
 <option value="/zh/take/" selected>🇨🇳 中文（简体）</option>
 <option value="/ja/take/">🇯🇵 日本語</option></select>
         <a class="btn small" href="/zh/take/">开始测试 →</a>
-        <button class="hamb" id="mobileToggle" aria-label="Menu">☰</button>
+        <button class="hamb" id="mobileToggle" aria-label="菜单">☰</button>
       </div>
       <div class="container mobile-menu" id="mobileMenu"><a href="/zh/take/">测试</a><a href="/zh/score-meaning/">分数含义</a><a href="/zh/questions/">题目</a><a href="/zh/average-score/">平均分</a><a href="/zh/blog/">博客</a><a href="/zh/about/">关于</a></div>
     </header>
@@ -56,7 +56,7 @@
       <span class="eyebrow">浏览器本地计算</span>
       <h1>Rice Purity Test</h1>
       <p>答案只在你的浏览器里计算。我们不收集，也不保存你的答案。 建议成熟用户使用。不要把这个测试当成建议。</p>
-      <div class="question-toolbar"><b>已勾选经历: <span id="checkedCount">0</span></b><b>分数: <span id="liveScore">100</span></b><div id="testProgress" class="progress" aria-label="Progress"><span></span></div><button class="btn secondary small" id="resetTest" type="button">Reset</button></div>
+      <div class="question-toolbar"><b>已勾选经历: <span id="checkedCount">0</span></b><b>分数: <span id="liveScore">100</span></b><div id="testProgress" class="progress" aria-label="进度"><span></span></div><button class="btn secondary small" id="resetTest" type="button">重置</button></div>
       <div id="questionList" class="grid"></div>
       <div class="sticky-result"><div><b>分数: <span id="liveScoreSticky">100</span></b><p class="mini">完成后再计算。你的答案不会被发送到任何地方。</p></div><button class="btn pink" id="finishTest" type="button">完成并计算</button></div>
       <section id="inlineResult" class="inline-result score-card" hidden>
@@ -78,14 +78,14 @@
         <div><b>分数含义</b>
           <a href="/zh/score-meaning/">0–100 每个分数完整解释</a>
           <a href="/zh/average-score/">平均分</a>
-          <a href="/zh/score/72/">Score 72</a>
+          <a href="/zh/score/72/">72 分</a>
         </div>
         <div><b>题目</b>
           <a href="/zh/take/">开始测试</a>
           <a href="/zh/questions/">题目</a>
-          <a href="/zh/blog/what-is-the-rice-purity-test/">What is it?</a>
+          <a href="/zh/blog/what-is-the-rice-purity-test/">这是什么？</a>
         </div>
-        <div><b>Trust</b>
+        <div><b>信任</b>
           <a href="/zh/privacy/">隐私</a>
           <a href="/zh/disclaimer/">免责声明</a>
           <a href="/zh/not-affiliated/">非官方</a>
@@ -93,7 +93,7 @@
       </div>
     </footer>
     
-<script src="/assets/js/questions.js" defer></script>
-<script src="/assets/js/app.js?v=ui-20260609-p43-mobilecards" defer></script>
+<script src="/assets/js/questions.js?v=ui-20260610-p46-i18nquiz" defer></script>
+<script src="/assets/js/app.js?v=ui-20260610-p46-i18nquiz" defer></script>
 </body>
 </html>

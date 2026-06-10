@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hacer el test — Rice Purity Test</title>
-<meta name="description" content="Take the Rice Purity Test privately in your browser. 100 questions, instant score, no sign-up.">
+<title>Haz el test — Rice Purity Test</title>
+<meta name="description" content="Haz el Rice Purity Test en privado en tu navegador. 100 preguntas, puntuación instantánea y sin registro.">
 <link rel="canonical" href="https://ricepuritytest.im/es/take/">
 <link rel="alternate" hreflang="en" href="https://ricepuritytest.im/take/">
 <link rel="alternate" hreflang="es" href="https://ricepuritytest.im/es/take/">
@@ -17,25 +17,25 @@
 <link rel="alternate" hreflang="x-default" href="https://ricepuritytest.im/take/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="RicePurityTest.im">
-<meta property="og:title" content="Hacer el test — Rice Purity Test">
-<meta property="og:description" content="Take the Rice Purity Test privately in your browser. 100 questions, instant score, no sign-up.">
+<meta property="og:title" content="Haz el test — Rice Purity Test">
+<meta property="og:description" content="Haz el Rice Purity Test en privado en tu navegador. 100 preguntas, puntuación instantánea y sin registro.">
 <meta property="og:url" content="https://ricepuritytest.im/es/take/">
 <meta property="og:image" content="https://ricepuritytest.im/assets/img/og-default.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#8847ed">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="/manifest.webmanifest">
-<link rel="stylesheet" href="/assets/css/styles.css?v=ui-20260609-p43-mobilecards">
+<link rel="stylesheet" href="/assets/css/styles.css?v=ui-20260610-p46-i18nquiz">
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Rice Purity Test","url":"https://ricepuritytest.im/es/take/","applicationCategory":"EntertainmentApplication","operatingSystem":"Any","isAccessibleForFree":true,"description":"A browser-based Rice Purity Test with no login and no stored answers."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Rice Purity Test","url":"https://ricepuritytest.im/es/take/","applicationCategory":"EntertainmentApplication","operatingSystem":"Any","isAccessibleForFree":true,"description":"Una versión del Rice Purity Test que funciona en el navegador, sin registro y sin guardar respuestas."}</script>
 </head>
 <body>
 
-    <a class="skip" href="#main">Skip to content</a>
+    <a class="skip" href="#main">Saltar al contenido</a>
     <header class="topbar">
       <div class="container nav">
         <a class="brand" href="/es/"><span class="brand-mark">♡</span><span>Rice Purity Test</span></a>
-        <nav class="navlinks" aria-label="Main navigation"><a href="/es/take/">Test</a><a href="/es/score-meaning/">Significado</a><a href="/es/questions/">Preguntas</a><a href="/es/average-score/">Promedio</a><a href="/es/blog/">Blog</a><a href="/es/about/">Acerca de</a></nav>
+        <nav class="navlinks" aria-label="Navegación principal"><a href="/es/take/">Test</a><a href="/es/score-meaning/">Significado</a><a href="/es/questions/">Preguntas</a><a href="/es/average-score/">Promedio</a><a href="/es/blog/">Blog</a><a href="/es/about/">Acerca de</a></nav>
         <select id="languageSelect" class="lang-select" aria-label="Idioma"><option value="/take/">🇺🇸 English</option>
 <option value="/es/take/" selected>🇪🇸 Español</option>
 <option value="/pt/take/">🇧🇷 Português</option>
@@ -45,7 +45,7 @@
 <option value="/zh/take/">🇨🇳 中文（简体）</option>
 <option value="/ja/take/">🇯🇵 日本語</option></select>
         <a class="btn small" href="/es/take/">Hacer el test →</a>
-        <button class="hamb" id="mobileToggle" aria-label="Menu">☰</button>
+        <button class="hamb" id="mobileToggle" aria-label="Menú">☰</button>
       </div>
       <div class="container mobile-menu" id="mobileMenu"><a href="/es/take/">Test</a><a href="/es/score-meaning/">Significado</a><a href="/es/questions/">Preguntas</a><a href="/es/average-score/">Promedio</a><a href="/es/blog/">Blog</a><a href="/es/about/">Acerca de</a></div>
     </header>
@@ -56,7 +56,7 @@
       <span class="eyebrow">En el navegador</span>
       <h1>Rice Purity Test</h1>
       <p>Las respuestas se calculan en tu navegador. No recopilamos ni guardamos tus respuestas. Sugerido para audiencias maduras. No lo trates como consejo.</p>
-      <div class="question-toolbar"><b>Experiencias marcadas: <span id="checkedCount">0</span></b><b>Puntuación: <span id="liveScore">100</span></b><div id="testProgress" class="progress" aria-label="Progress"><span></span></div><button class="btn secondary small" id="resetTest" type="button">Reset</button></div>
+      <div class="question-toolbar"><b>Experiencias marcadas: <span id="checkedCount">0</span></b><b>Puntuación: <span id="liveScore">100</span></b><div id="testProgress" class="progress" aria-label="Progreso"><span></span></div><button class="btn secondary small" id="resetTest" type="button">Restablecer</button></div>
       <div id="questionList" class="grid"></div>
       <div class="sticky-result"><div><b>Puntuación: <span id="liveScoreSticky">100</span></b><p class="mini">Termina cuando quieras. Tus respuestas no se envian a ningun lugar.</p></div><button class="btn pink" id="finishTest" type="button">Finalizar y calcular</button></div>
       <section id="inlineResult" class="inline-result score-card" hidden>
@@ -78,14 +78,14 @@
         <div><b>Significado de la puntuación</b>
           <a href="/es/score-meaning/">Todas las puntuaciones explicadas</a>
           <a href="/es/average-score/">Puntuación promedio</a>
-          <a href="/es/score/72/">Score 72</a>
+          <a href="/es/score/72/">72 puntos</a>
         </div>
         <div><b>Preguntas</b>
           <a href="/es/take/">Hacer el test</a>
           <a href="/es/questions/">Preguntas</a>
-          <a href="/es/blog/what-is-the-rice-purity-test/">What is it?</a>
+          <a href="/es/blog/what-is-the-rice-purity-test/">¿Qué es?</a>
         </div>
-        <div><b>Trust</b>
+        <div><b>Confianza</b>
           <a href="/es/privacy/">Privacidad</a>
           <a href="/es/disclaimer/">Aviso</a>
           <a href="/es/not-affiliated/">Sin afiliación</a>
@@ -93,7 +93,7 @@
       </div>
     </footer>
     
-<script src="/assets/js/questions.js" defer></script>
-<script src="/assets/js/app.js?v=ui-20260609-p43-mobilecards" defer></script>
+<script src="/assets/js/questions.js?v=ui-20260610-p46-i18nquiz" defer></script>
+<script src="/assets/js/app.js?v=ui-20260610-p46-i18nquiz" defer></script>
 </body>
 </html>

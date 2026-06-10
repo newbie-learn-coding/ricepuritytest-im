@@ -3155,3 +3155,403 @@ a {
     gap: 10px;
   }
 }
+
+/* Canonical DOM card preview density.
+   All on-page score cards share this block; older generated rules above remain fallback. */
+.dom-result-card {
+  container-type: inline-size;
+  width: min(100%, 680px);
+  --dom-border-width: clamp(3px, 1.15cqw, 6px);
+  --dom-shadow: clamp(6px, 2.35cqw, 16px);
+  --dom-hover-shadow: clamp(6px, 2.75cqw, 20px);
+  --dom-header-height: clamp(30px, 8.5cqw, 56px);
+  --dom-header-gap: clamp(6px, 2cqw, 14px);
+  --dom-header-pad-x: clamp(10px, 4.2cqw, 28px);
+  --dom-header-font: clamp(7px, 2.08cqw, 14px);
+  --dom-body-pad-y: clamp(10px, 4.1cqw, 30px);
+  --dom-body-pad-x: clamp(12px, 5cqw, 36px);
+  --dom-body-pad-bottom: clamp(8px, 3.2cqw, 24px);
+  --dom-body-gap: clamp(8px, 3.5cqw, 24px);
+  --dom-kicker-font: clamp(8px, 2.55cqw, 18px);
+  --dom-score-gap: clamp(3px, 1.3cqw, 8px);
+  --dom-score-margin-y: clamp(1px, 1.3cqw, 8px);
+  --dom-score-font: clamp(40px, 13.5cqw, 96px);
+  --dom-score-small: clamp(10px, 3.5cqw, 26px);
+  --dom-score-small-shift: clamp(-8px, -1.05cqw, -3px);
+  --dom-badge-pad-y: clamp(4px, 1.3cqw, 10px);
+  --dom-badge-pad-x: clamp(7px, 2.4cqw, 16px);
+  --dom-badge-font: clamp(8px, 2.1cqw, 15px);
+  --dom-prompt-margin: clamp(5px, 2.1cqw, 16px);
+  --dom-prompt-font: clamp(14px, 4.15cqw, 29px);
+  --dom-copy-margin: clamp(5px, 2.1cqw, 16px);
+  --dom-copy-border: clamp(3px, 1.1cqw, 6px);
+  --dom-copy-pad: clamp(6px, 2cqw, 14px);
+  --dom-copy-font: clamp(8px, 2.4cqw, 17px);
+  --dom-footer-height: clamp(36px, 10.5cqw, 74px);
+  --dom-footer-gap: clamp(6px, 2.6cqw, 18px);
+  --dom-footer-pad-y: clamp(5px, 2.1cqw, 14px);
+  --dom-footer-pad-x: clamp(10px, 4.6cqw, 32px);
+  --dom-footnote-font: clamp(7px, 1.9cqw, 14px);
+  --dom-footnote-bold: clamp(8px, 2.25cqw, 17px);
+  --dom-qr-size: clamp(28px, 9cqw, 62px);
+}
+
+.dom-card-landscape {
+  width: min(100%, 640px);
+  --dom-border-width: clamp(3px, .7cqw, 5px);
+  --dom-shadow: clamp(5px, 1.6cqw, 12px);
+  --dom-hover-shadow: clamp(5px, 1.9cqw, 14px);
+  --dom-header-height: clamp(28px, 6.4cqw, 42px);
+  --dom-header-pad-x: clamp(8px, 3.1cqw, 20px);
+  --dom-header-font: clamp(6px, 1.65cqw, 12px);
+  --dom-body-pad-y: clamp(5px, 2.8cqw, 18px);
+  --dom-body-pad-x: clamp(8px, 3.8cqw, 24px);
+  --dom-body-pad-bottom: clamp(4px, 2.1cqw, 12px);
+  --dom-body-gap: clamp(6px, 2.8cqw, 18px);
+  --dom-kicker-font: clamp(6px, 1.75cqw, 10px);
+  --dom-score-font: clamp(32px, 9.4cqw, 60px);
+  --dom-score-small: clamp(8px, 2.65cqw, 17px);
+  --dom-badge-font: clamp(6px, 1.75cqw, 12px);
+  --dom-prompt-font: clamp(10px, 3cqw, 19px);
+  --dom-copy-font: clamp(6px, 1.85cqw, 12px);
+  --dom-footer-height: clamp(24px, 7.5cqw, 48px);
+  --dom-footer-pad-x: clamp(6px, 3.4cqw, 22px);
+  --dom-footnote-font: clamp(5px, 1.55cqw, 10px);
+  --dom-footnote-bold: clamp(6px, 1.85cqw, 12px);
+  --dom-qr-size: clamp(18px, 6.2cqw, 40px);
+}
+
+.dom-card-square {
+  width: min(100%, 420px);
+  --dom-header-height: clamp(32px, 9cqw, 46px);
+  --dom-header-pad-x: clamp(10px, 3.5cqw, 18px);
+  --dom-header-font: clamp(7px, 2cqw, 10px);
+  --dom-body-pad-y: clamp(10px, 3cqw, 18px);
+  --dom-body-pad-x: clamp(12px, 4cqw, 22px);
+  --dom-body-pad-bottom: clamp(8px, 2.1cqw, 12px);
+  --dom-kicker-font: clamp(8px, 3.1cqw, 15px);
+  --dom-score-font: clamp(56px, 21.8cqw, 102px);
+  --dom-score-small: clamp(13px, 4.7cqw, 23px);
+  --dom-badge-font: clamp(8px, 2.75cqw, 14px);
+  --dom-prompt-font: clamp(18px, 6.6cqw, 31px);
+  --dom-copy-font: clamp(9px, 3.35cqw, 15px);
+  --dom-footer-height: clamp(40px, 9.8cqw, 56px);
+  --dom-footnote-font: clamp(7px, 2.05cqw, 10px);
+  --dom-footnote-bold: clamp(8px, 2.5cqw, 12px);
+  --dom-qr-size: clamp(26px, 7.6cqw, 46px);
+  --dom-portrait-score-row: .96fr;
+  --dom-portrait-copy-row: 1.04fr;
+}
+
+.dom-card-story {
+  width: min(100%, 300px);
+  --dom-header-height: clamp(42px, 17cqw, 60px);
+  --dom-header-pad-x: clamp(12px, 5.2cqw, 18px);
+  --dom-header-font: clamp(8px, 3.35cqw, 13px);
+  --dom-body-pad-y: clamp(9px, 4cqw, 18px);
+  --dom-body-pad-x: clamp(14px, 6.2cqw, 22px);
+  --dom-body-pad-bottom: clamp(8px, 3.2cqw, 14px);
+  --dom-kicker-font: clamp(11px, 4.6cqw, 17px);
+  --dom-score-font: clamp(86px, 42cqw, 144px);
+  --dom-score-small: clamp(18px, 8.2cqw, 30px);
+  --dom-badge-font: clamp(9px, 3.8cqw, 14px);
+  --dom-prompt-font: clamp(24px, 12.2cqw, 42px);
+  --dom-copy-font: clamp(10px, 4.35cqw, 16px);
+  --dom-footer-height: clamp(54px, 21cqw, 82px);
+  --dom-footnote-font: clamp(8px, 3.05cqw, 11px);
+  --dom-footnote-bold: clamp(9px, 3.65cqw, 13px);
+  --dom-qr-size: clamp(36px, 18cqw, 74px);
+  --dom-portrait-score-row: .94fr;
+  --dom-portrait-copy-row: 1.06fr;
+}
+
+.card-teaser .dom-result-card,
+.card-studio-compact .dom-result-card,
+[data-card-studio="score"] .dom-result-card {
+  width: min(100%, 540px);
+}
+
+.card-teaser .dom-card-landscape,
+.card-studio-compact .dom-card-landscape,
+[data-card-studio="score"] .dom-card-landscape {
+  width: min(100%, 520px);
+}
+
+.card-teaser .dom-card-square,
+.card-studio-compact .dom-card-square,
+[data-card-studio="score"] .dom-card-square {
+  width: min(100%, 390px);
+}
+
+.card-teaser .dom-card-story,
+.card-studio-compact .dom-card-story,
+[data-card-studio="score"] .dom-card-story {
+  width: min(100%, 250px);
+}
+
+.hero-grid > [data-card-studio="teaser"] .dom-card-landscape {
+  width: min(100%, 430px);
+}
+
+.hero-grid > [data-card-studio="teaser"] .dom-card-square {
+  width: min(100%, 350px);
+}
+
+.hero-grid > [data-card-studio="teaser"] .dom-card-story {
+  width: min(100%, 230px);
+}
+
+.dom-card-inner {
+  border-width: var(--dom-border-width);
+  box-shadow: var(--dom-shadow) var(--dom-shadow) 0 #050505;
+}
+
+.dom-result-card:hover .dom-card-inner {
+  box-shadow: var(--dom-hover-shadow) var(--dom-hover-shadow) 0 #050505;
+}
+
+.dom-card-notebook .dom-card-inner,
+.dom-card-notebook:hover .dom-card-inner {
+  box-shadow: var(--dom-shadow) var(--dom-shadow) 0 rgba(44, 62, 80, .22);
+}
+
+.dom-card-neon .dom-card-inner,
+.dom-card-neon:hover .dom-card-inner {
+  box-shadow: 0 0 clamp(18px, 5cqw, 34px) rgba(0, 229, 255, .22);
+}
+
+.dom-card-pastel .dom-card-inner,
+.dom-card-pastel:hover .dom-card-inner {
+  box-shadow: var(--dom-shadow) var(--dom-shadow) 0 #e5c5b5;
+}
+
+.dom-card-minimal .dom-card-inner,
+.dom-card-minimal:hover .dom-card-inner {
+  box-shadow: 0 var(--dom-shadow) calc(var(--dom-shadow) * 2.4) rgba(23, 23, 23, .1);
+}
+
+.dom-card-header {
+  gap: var(--dom-header-gap);
+  min-height: var(--dom-header-height);
+  border-bottom-width: clamp(2px, .8cqw, 4px);
+  padding: 0 var(--dom-header-pad-x);
+  font-size: var(--dom-header-font);
+}
+
+.dom-card-body {
+  padding: var(--dom-body-pad-y) var(--dom-body-pad-x) var(--dom-body-pad-bottom);
+}
+
+.dom-card-landscape .dom-card-body {
+  gap: var(--dom-body-gap);
+}
+
+.dom-card-square .dom-card-body,
+.dom-card-story .dom-card-body {
+  align-content: stretch;
+  align-items: stretch;
+  grid-auto-rows: initial;
+  grid-template-rows:
+    minmax(0, var(--dom-portrait-score-row, 1fr))
+    minmax(0, var(--dom-portrait-copy-row, 1fr));
+  row-gap: 0;
+}
+
+.dom-card-square .dom-score-block,
+.dom-card-square .dom-card-copy,
+.dom-card-story .dom-score-block,
+.dom-card-story .dom-card-copy {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  overflow: visible;
+}
+
+.dom-card-kicker,
+.dom-card-middle {
+  font-size: var(--dom-kicker-font);
+}
+
+.dom-score-lockup {
+  gap: var(--dom-score-gap);
+  margin: var(--dom-score-margin-y) 0;
+}
+
+.dom-score-lockup strong {
+  font-size: var(--dom-score-font);
+}
+
+.dom-score-lockup small {
+  font-size: var(--dom-score-small);
+  transform: translateY(var(--dom-score-small-shift));
+}
+
+.dom-card-badge {
+  justify-content: center;
+  padding: var(--dom-badge-pad-y) var(--dom-badge-pad-x);
+  font-size: var(--dom-badge-font);
+  text-align: center;
+}
+
+.dom-card-prompt {
+  margin-top: var(--dom-prompt-margin);
+  font-size: var(--dom-prompt-font);
+  line-height: 1.02;
+}
+
+.dom-card-copy p {
+  max-width: 92%;
+  margin-top: var(--dom-copy-margin);
+  border-left-width: var(--dom-copy-border);
+  padding-left: var(--dom-copy-pad);
+  font-size: var(--dom-copy-font);
+  line-height: 1.1;
+}
+
+.dom-card-footer {
+  min-height: var(--dom-footer-height);
+  gap: var(--dom-footer-gap);
+  padding: var(--dom-footer-pad-y) var(--dom-footer-pad-x);
+}
+
+.dom-card-footnote p {
+  font-size: var(--dom-footnote-font);
+}
+
+.dom-card-footnote b {
+  font-size: var(--dom-footnote-bold);
+}
+
+.dom-card-qr {
+  padding: clamp(2px, .9cqw, 5px);
+}
+
+.dom-card-qr img,
+.dom-card-story .dom-card-qr img {
+  width: var(--dom-qr-size);
+  height: var(--dom-qr-size);
+}
+
+.dom-card-landscape .dom-card-copy p {
+  max-width: 100%;
+  line-height: 1.08;
+}
+
+:is(.card-teaser, .card-studio) .dom-result-card .dom-card-inner,
+.hero-grid > [data-card-studio="teaser"] .dom-result-card .dom-card-inner {
+  border-width: var(--dom-border-width);
+  box-shadow: var(--dom-shadow) var(--dom-shadow) 0 #050505;
+}
+
+:is(.card-teaser, .card-studio) .dom-result-card:hover .dom-card-inner,
+.hero-grid > [data-card-studio="teaser"] .dom-result-card:hover .dom-card-inner {
+  box-shadow: var(--dom-hover-shadow) var(--dom-hover-shadow) 0 #050505;
+}
+
+:is(.card-teaser, .card-studio) .dom-result-card .dom-card-header,
+.hero-grid > [data-card-studio="teaser"] .dom-result-card .dom-card-header {
+  gap: var(--dom-header-gap);
+  min-height: var(--dom-header-height);
+  border-bottom-width: clamp(2px, .8cqw, 4px);
+  padding: 0 var(--dom-header-pad-x);
+  font-size: var(--dom-header-font);
+}
+
+:is(.card-teaser, .card-studio) .dom-result-card .dom-card-body,
+.hero-grid > [data-card-studio="teaser"] .dom-result-card .dom-card-body {
+  padding: var(--dom-body-pad-y) var(--dom-body-pad-x) var(--dom-body-pad-bottom);
+}
+
+:is(.card-teaser, .card-studio) .dom-card-landscape .dom-card-body,
+.hero-grid > [data-card-studio="teaser"] .dom-card-landscape .dom-card-body {
+  gap: var(--dom-body-gap);
+}
+
+:is(.card-teaser, .card-studio) :is(.dom-card-square, .dom-card-story) .dom-card-body,
+.hero-grid > [data-card-studio="teaser"] :is(.dom-card-square, .dom-card-story) .dom-card-body {
+  align-content: stretch;
+  align-items: stretch;
+  grid-auto-rows: initial;
+  grid-template-rows:
+    minmax(0, var(--dom-portrait-score-row, 1fr))
+    minmax(0, var(--dom-portrait-copy-row, 1fr));
+  row-gap: 0;
+}
+
+:is(.card-teaser, .card-studio) :is(.dom-card-square, .dom-card-story) :is(.dom-score-block, .dom-card-copy),
+.hero-grid > [data-card-studio="teaser"] :is(.dom-card-square, .dom-card-story) :is(.dom-score-block, .dom-card-copy) {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  overflow: visible;
+}
+
+:is(.card-teaser, .card-studio) .dom-result-card :is(.dom-card-kicker, .dom-card-middle),
+.hero-grid > [data-card-studio="teaser"] .dom-result-card :is(.dom-card-kicker, .dom-card-middle) {
+  font-size: var(--dom-kicker-font);
+}
+
+:is(.card-teaser, .card-studio) .dom-result-card .dom-score-lockup,
+.hero-grid > [data-card-studio="teaser"] .dom-result-card .dom-score-lockup {
+  gap: var(--dom-score-gap);
+  margin: var(--dom-score-margin-y) 0;
+}
+
+:is(.card-teaser, .card-studio) .dom-result-card .dom-score-lockup strong,
+.hero-grid > [data-card-studio="teaser"] .dom-result-card .dom-score-lockup strong {
+  font-size: var(--dom-score-font);
+}
+
+:is(.card-teaser, .card-studio) .dom-result-card .dom-score-lockup small,
+.hero-grid > [data-card-studio="teaser"] .dom-result-card .dom-score-lockup small {
+  font-size: var(--dom-score-small);
+  transform: translateY(var(--dom-score-small-shift));
+}
+
+:is(.card-teaser, .card-studio) .dom-result-card .dom-card-badge,
+.hero-grid > [data-card-studio="teaser"] .dom-result-card .dom-card-badge {
+  justify-content: center;
+  padding: var(--dom-badge-pad-y) var(--dom-badge-pad-x);
+  font-size: var(--dom-badge-font);
+  text-align: center;
+}
+
+:is(.card-teaser, .card-studio) .dom-result-card .dom-card-prompt,
+.hero-grid > [data-card-studio="teaser"] .dom-result-card .dom-card-prompt {
+  margin-top: var(--dom-prompt-margin);
+  font-size: var(--dom-prompt-font);
+  line-height: 1.02;
+}
+
+:is(.card-teaser, .card-studio) .dom-result-card .dom-card-copy p,
+.hero-grid > [data-card-studio="teaser"] .dom-result-card .dom-card-copy p {
+  max-width: 92%;
+  margin-top: var(--dom-copy-margin);
+  border-left-width: var(--dom-copy-border);
+  padding-left: var(--dom-copy-pad);
+  font-size: var(--dom-copy-font);
+  line-height: 1.1;
+}
+
+:is(.card-teaser, .card-studio) .dom-result-card .dom-card-footer,
+.hero-grid > [data-card-studio="teaser"] .dom-result-card .dom-card-footer {
+  min-height: var(--dom-footer-height);
+  gap: var(--dom-footer-gap);
+  padding: var(--dom-footer-pad-y) var(--dom-footer-pad-x);
+}
+
+:is(.card-teaser, .card-studio) .dom-result-card .dom-card-footnote p,
+.hero-grid > [data-card-studio="teaser"] .dom-result-card .dom-card-footnote p {
+  font-size: var(--dom-footnote-font);
+}
+
+:is(.card-teaser, .card-studio) .dom-result-card .dom-card-footnote b,
+.hero-grid > [data-card-studio="teaser"] .dom-result-card .dom-card-footnote b {
+  font-size: var(--dom-footnote-bold);
+}
+
+:is(.card-teaser, .card-studio) .dom-result-card .dom-card-qr img,
+.hero-grid > [data-card-studio="teaser"] .dom-result-card .dom-card-qr img {
+  width: var(--dom-qr-size);
+  height: var(--dom-qr-size);
+}

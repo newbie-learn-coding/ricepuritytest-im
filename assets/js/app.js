@@ -5,7 +5,7 @@
   const path = window.location.pathname;
   const prefix = path.match(/^\/(es|pt|id|de|fr|zh|ja)\//)?.[1] || 'en';
   const base = prefix === 'en' ? '' : '/' + prefix;
-  const ASSET_VERSION = 'ui-20260609-p43-mobilecards';
+  const ASSET_VERSION = 'ui-20260610-p46-i18nquiz';
   const QR_CANONICAL_URL = 'https://ricepuritytest.im/take/';
   const QR_ASSET_URL = `/assets/img/qr-ricepuritytest-take.svg?v=${ASSET_VERSION}`;
   const DEFAULT_SCORE = 75;
@@ -66,7 +66,8 @@
       teaserTitle:'Turn your score into a challenge card',
       teaserScoreTitle:'Share score {score} as a challenge card',
       teaserLead:'Preview the card here, then open the studio for templates, sizes, PNG, copy image, and sharing.',
-      createCard:'Create share card'
+      createCard:'Create share card',
+      startTest:'Start Test'
     },
     zh: {
       copiedImage:'图片已复制。',
@@ -109,7 +110,8 @@
       teaserTitle:'把你的分数变成可分享挑战卡',
       teaserScoreTitle:'把 {score} 分做成挑战卡',
       teaserLead:'先在这里预览，再打开工作台选择模板、尺寸、PNG、复制图片和分享。',
-      createCard:'制作分享卡'
+      createCard:'制作分享卡',
+      startTest:'开始测试'
     },
     es: {
       copiedImage:'Imagen copiada.',
@@ -152,7 +154,8 @@
       teaserTitle:'Convierte tu puntuacion en una tarjeta de reto',
       teaserScoreTitle:'Comparte la puntuacion {score} como tarjeta de reto',
       teaserLead:'Previsualiza la tarjeta aqui y abre el estudio para plantillas, tamanos, PNG, copiar imagen y compartir.',
-      createCard:'Crear tarjeta'
+      createCard:'Crear tarjeta',
+      startTest:'Hacer el test'
     },
     pt: {
       copiedImage:'Imagem copiada.',
@@ -195,7 +198,8 @@
       teaserTitle:'Transforme sua pontuacao em um cartao de desafio',
       teaserScoreTitle:'Compartilhe a pontuacao {score} como cartao de desafio',
       teaserLead:'Veja a previa aqui e abra o estudio para modelos, tamanhos, PNG, copiar imagem e compartilhar.',
-      createCard:'Criar cartao'
+      createCard:'Criar cartao',
+      startTest:'Fazer o teste'
     },
     id: {
       copiedImage:'Gambar disalin.',
@@ -238,7 +242,8 @@
       teaserTitle:'Ubah skormu menjadi kartu tantangan',
       teaserScoreTitle:'Bagikan skor {score} sebagai kartu tantangan',
       teaserLead:'Lihat pratinjau di sini, lalu buka studio untuk template, ukuran, PNG, salin gambar, dan berbagi.',
-      createCard:'Buat kartu'
+      createCard:'Buat kartu',
+      startTest:'Mulai tes'
     },
     de: {
       copiedImage:'Bild kopiert.',
@@ -281,7 +286,8 @@
       teaserTitle:'Mach aus deiner Punktzahl eine Challenge-Karte',
       teaserScoreTitle:'Teile Punktzahl {score} als Challenge-Karte',
       teaserLead:'Sieh dir die Karte hier an und oeffne das Studio fuer Vorlagen, Groessen, PNG, Bildkopie und Teilen.',
-      createCard:'Karte erstellen'
+      createCard:'Karte erstellen',
+      startTest:'Test starten'
     },
     fr: {
       copiedImage:'Image copiee.',
@@ -324,7 +330,8 @@
       teaserTitle:'Transforme ton score en carte defi',
       teaserScoreTitle:'Partage le score {score} en carte defi',
       teaserLead:'Apercu ici, puis ouvre le studio pour modeles, formats, PNG, copie image et partage.',
-      createCard:'Creer la carte'
+      createCard:'Creer la carte',
+      startTest:'Faire le test'
     },
     ja: {
       copiedImage:'画像をコピーしました。',
@@ -367,11 +374,71 @@
       teaserTitle:'スコアを共有用チャレンジカードにする',
       teaserScoreTitle:'{score} 点をチャレンジカードで共有',
       teaserLead:'ここでカードを確認し、スタジオでテンプレート、サイズ、PNG、画像コピー、共有を選べます。',
-      createCard:'カード作成'
+      createCard:'カード作成',
+      startTest:'テストを始める'
     }
   };
 
   const text = Object.assign({}, ui.en, ui[prefix] || {});
+  const scoreBands = {
+    en: {
+      veryHigh: 'Very High Score',
+      high: 'High Score',
+      moderate: 'Moderate Score',
+      experienced: 'Experienced Score',
+      veryExperienced: 'Very Experienced Score'
+    },
+    es: {
+      veryHigh: 'Puntuacion muy alta',
+      high: 'Puntuacion alta',
+      moderate: 'Puntuacion media',
+      experienced: 'Puntuacion con experiencia',
+      veryExperienced: 'Puntuacion muy experimentada'
+    },
+    pt: {
+      veryHigh: 'Pontuacao muito alta',
+      high: 'Pontuacao alta',
+      moderate: 'Pontuacao media',
+      experienced: 'Pontuacao experiente',
+      veryExperienced: 'Pontuacao muito experiente'
+    },
+    id: {
+      veryHigh: 'Skor sangat tinggi',
+      high: 'Skor tinggi',
+      moderate: 'Skor sedang',
+      experienced: 'Skor berpengalaman',
+      veryExperienced: 'Skor sangat berpengalaman'
+    },
+    de: {
+      veryHigh: 'Sehr hohe Punktzahl',
+      high: 'Hohe Punktzahl',
+      moderate: 'Mittlere Punktzahl',
+      experienced: 'Erfahrene Punktzahl',
+      veryExperienced: 'Sehr erfahrene Punktzahl'
+    },
+    fr: {
+      veryHigh: 'Score tres eleve',
+      high: 'Score eleve',
+      moderate: 'Score moyen',
+      experienced: 'Score experimente',
+      veryExperienced: 'Score tres experimente'
+    },
+    zh: {
+      veryHigh: '超高分',
+      high: '高分',
+      moderate: '中等分',
+      experienced: '经验较多',
+      veryExperienced: '经验非常多'
+    },
+    ja: {
+      veryHigh: 'かなり高いスコア',
+      high: '高いスコア',
+      moderate: '中間スコア',
+      experienced: '経験多めのスコア',
+      veryExperienced: 'かなり経験多めのスコア'
+    }
+  };
+  const bandText = Object.assign({}, scoreBands.en, scoreBands[prefix] || {});
   const monoFont = 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace';
   const sansFont = 'Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif';
   const serifFont = 'Georgia, "Times New Roman", serif';
@@ -406,9 +473,9 @@
     if(score >= 90){
       return {
         key:'very-high',
-        normalLabel:'Very High Score',
+        normalLabel: bandText.veryHigh,
         socialLabel:'Almost Untouched Energy',
-        label:social ? 'Almost Untouched Energy' : 'Very High Score',
+        label:social ? 'Almost Untouched Energy' : bandText.veryHigh,
         desc:'Almost untouched by chaos.',
         color:'#10b981',
         color2:'#047857',
@@ -419,9 +486,9 @@
     if(score >= 70){
       return {
         key:'high',
-        normalLabel:'High Score',
+        normalLabel: bandText.high,
         socialLabel:'High Score Energy',
-        label:social ? 'High Score Energy' : 'High Score',
+        label:social ? 'High Score Energy' : bandText.high,
         desc:'Some stories. Still pretty innocent.',
         color:'#3b82f6',
         color2:'#1d4ed8',
@@ -432,9 +499,9 @@
     if(score >= 50){
       return {
         key:'moderate',
-        normalLabel:'Moderate Score',
+        normalLabel: bandText.moderate,
         socialLabel:'Balanced Energy',
-        label:social ? 'Balanced Energy' : 'Moderate Score',
+        label:social ? 'Balanced Energy' : bandText.moderate,
         desc:'Plenty of stories. No judgment.',
         color:'#f59e0b',
         color2:'#b45309',
@@ -445,9 +512,9 @@
     if(score >= 20){
       return {
         key:'experienced',
-        normalLabel:'Experienced Score',
+        normalLabel: bandText.experienced,
         socialLabel:'Main Character Energy',
-        label:social ? 'Main Character Energy' : 'Experienced Score',
+        label:social ? 'Main Character Energy' : bandText.experienced,
         desc:'Experienced, but still human.',
         color:'#8b5cf6',
         color2:'#6d28d9',
@@ -457,9 +524,9 @@
     }
     return {
       key:'very-experienced',
-      normalLabel:'Very Experienced Score',
+      normalLabel: bandText.veryExperienced,
       socialLabel:'Experienced Energy',
-      label:social ? 'Experienced Energy' : 'Very Experienced Score',
+      label:social ? 'Experienced Energy' : bandText.veryExperienced,
       desc:"Let's not talk about it.",
       color:'#f43f5e',
       color2:'#be123c',
@@ -746,7 +813,7 @@
     const title = (mode === 'score' ? text.teaserScoreTitle : text.teaserTitle).replace('{score}', score);
     const primaryHref = `${base}/result/?score=${score}`;
     const secondaryHref = `${base}/take/`;
-    const secondaryText = mode === 'score' ? text.retake : 'Start Test';
+    const secondaryText = mode === 'score' ? text.retake : text.startTest;
     return `
       <div class="card-teaser card-teaser-${mode}">
         <div class="teaser-copy">
